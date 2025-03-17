@@ -36,6 +36,21 @@
             opacity: 0.2;
         }
 
+        .images-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .images-container img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff4757;
+        }
+
         h1 {
             color: #ff4757;
             margin-bottom: 20px;
@@ -48,19 +63,16 @@
             font-size: 18px;
             margin-bottom: 30px;
         }
-
-        .birthday-cake {
-            width: 150px;
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
 
 <div class="container">
-<img src="burat.jpg" alt="User Profile Image">
-    <img src="burats.jpg" alt="User Profile Image">
-    <img src="buratss.jpg" alt="User Profile Image">
+    <div class="images-container">
+        <img src="burat.jpg" alt="User Profile Image">
+        <img src="burats.jpg" alt="User Profile Image">
+        <img src="buratss.jpg" alt="User Profile Image">
+    </div>
     <h1>🎂 HAPPY BIRTHDAY MARKJOHN FRANCISCO OR BURAT NAMIN! 🎂</h1>
     <p>Wishing you a fantastic day filled with joy, laughter, and of course... CAKE! 🍰</p>
 </div>
