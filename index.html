@@ -14,6 +14,9 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(135deg, #87CEEB, #e0f7fa);
+            background-image: url('clouds.png');
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         .container {
@@ -43,25 +46,32 @@
             margin-bottom: 20px;
         }
 
-        .images-container a img {
+        .images-container img {
             width: 80px;
             height: 80px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #ff4757;
+            cursor: pointer;
         }
 
-        h1 {
-            color: #ff4757;
-            margin-bottom: 20px;
-            font-size: 28px;
-            font-weight: bold;
+        .popup-image {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        p {
-            color: #555;
-            font-size: 18px;
-            margin-bottom: 30px;
+        .popup-image img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -69,13 +79,28 @@
 
 <div class="container">
     <div class="images-container">
-        <a href="burat.jpg" target="_blank"><img src="burat.jpg" alt="User Profile Image"></a>
-        <a href="burats.jpg" target="_blank"><img src="burats.jpg" alt="User Profile Image"></a>
-        <a href="buratss.jpg" target="_blank"><img src="buratss.jpg" alt="User Profile Image"></a>
+        <img src="burat.jpg" alt="User Profile Image" onclick="showImage(this.src)">
+        <img src="burats.jpg" alt="User Profile Image" onclick="showImage(this.src)">
+        <img src="buratss.jpg" alt="User Profile Image" onclick="showImage(this.src)">
     </div>
     <h1>🎂 HAPPY BIRTHDAY MARKJOHN FRANCISCO OR BURAT NAMIN! 🎂</h1>
     <p>Wishing you a fantastic day filled with joy, laughter, and of course... CAKE! 🍰</p>
 </div>
+
+<div class="popup-image" id="popup" onclick="hideImage()">
+    <img id="popup-img" src="">
+</div>
+
+<script>
+    function showImage(src) {
+        document.getElementById('popup-img').src = src;
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    function hideImage() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
