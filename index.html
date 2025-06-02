@@ -3,104 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
+    <title>Message with Cat</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            background: linear-gradient(135deg, #87CEEB, #e0f7fa);
-            background-image: url('clouds.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        .container {
-            max-width: 600px;
-            background-color: #fff;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .container::before {
-            content: "🕊️";
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            font-size: 100px;
-            opacity: 0.2;
-        }
-
-        .images-container {
-            display: flex;
             justify-content: center;
-            gap: 10px;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 48px;
+            color: #ff4d4d;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             margin-bottom: 20px;
         }
-
-        .images-container img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #ff4757;
-            cursor: pointer;
-        }
-
-        .popup-image {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .popup-image img {
-            max-width: 90%;
-            max-height: 90%;
+        img {
+            width: 300px;
+            height: auto;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="images-container">
-        <img src="burat.jpg" alt="User Profile Image" onclick="showImage(this.src)">
-        <img src="burats.jpg" alt="User Profile Image" onclick="showImage(this.src)">
-        <img src="buratss.jpg" alt="User Profile Image" onclick="showImage(this.src)">
-    </div>
-    <h1>🎂 HAPPY BIRTHDAY MARKJOHN FRANCISCO BURAT NAMIN! 🎂</h1>
-    <p>Wishing you a fantastic day filled with joy, laughter, and of course... CAKE!🍰    KISS NAMIN BEBE BOY!!</p>
-</div>
-
-<div class="popup-image" id="popup" onclick="hideImage()">
-    <img id="popup-img" src="">
-</div>
-
-<script>
-    function showImage(src) {
-        document.getElementById('popup-img').src = src;
-        document.getElementById('popup').style.display = 'flex';
-    }
-
-    function hideImage() {
-        document.getElementById('popup').style.display = 'none';
-    }
-</script>
-
+    <h1>You're Gay</h1>
+    <img src="https://placekitten.com/300/300" alt="Cute Cat">
 </body>
 </html>
