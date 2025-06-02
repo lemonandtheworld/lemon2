@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message with Cat</title>
+    <title>Message with Cat Pounce Animation</title>
     <style>
         body {
             display: flex;
@@ -20,12 +20,42 @@
             color: #ff4d4d;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             margin-bottom: 20px;
+            animation: fadeInBounce 2s ease-in-out;
         }
         img {
             width: 300px;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: catPounce 2s ease-in-out infinite;
+        }
+        @keyframes fadeInBounce {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes catPounce {
+            0% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px) scale(1.05);
+            }
+            60% {
+                transform: translateY(-20px) scale(1.05);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+            }
         }
     </style>
 </head>
